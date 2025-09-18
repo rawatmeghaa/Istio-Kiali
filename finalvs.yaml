@@ -20,3 +20,7 @@ spec:
         host: reviews
         subset: v3
       weight: 50
+  retries:
+    attempts: 3
+    perTryTimeout: 2s
+    retryOn: 5xx,connect-failure
